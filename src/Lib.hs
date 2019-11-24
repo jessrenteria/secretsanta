@@ -62,4 +62,5 @@ choice (x:xs) g = let (z, _, g') = foldl' choice' (x, 1, g) xs in (Just z, g')
     choice' :: (RandomGen g) => (a, Double, g) -> a -> (a, Double, g)
     choice' (x, c, g) y =
       let (r, g') = random g
-      in if r <= (1 / c) then (y, c + 1, g') else (x, c + 1, g')
+          c' = c + 1
+      in if r <= (1 / c') then (y, c', g') else (x, c', g')
