@@ -21,6 +21,9 @@ description:         Please see the README on GitHub at <https://github.com/jess
 
 dependencies:
 - base >= 4.7 && < 5
+- bimap >= 0.4 && < 1
+- containers >= 0.6 && < 1
+- random >= 1.1 && < 2
 
 library:
   source-dirs: src
